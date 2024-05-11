@@ -1,19 +1,19 @@
 import {StyleSheet, useColorScheme} from 'react-native';
 import LottieView from 'lottie-react-native';
 import React from 'react';
-// import {RootNavigationProp} from '../navigation/Root';
+import {RootNavigationProp} from '../navigation/Root';
 import _Onboarding from 'react-native-onboarding-swiper';
-// import {useNavigation} from '@react-navigation/native';
+import {useNavigation} from '@react-navigation/native';
 
 export function Onboarding() {
   const isDarkMode = useColorScheme() === 'dark';
-  // const navigation = useNavigation<RootNavigationProp>();
+  const navigation = useNavigation<RootNavigationProp>();
 
   return (
     <_Onboarding
       bottomBarHighlight={false}
-      // onSkip={() => navigation.replace('CreateWallet')}
-      // onDone={() => navigation.replace('CreateWallet')}
+      onSkip={() => navigation.replace('AddWallet')}
+      onDone={() => navigation.replace('AddWallet')}
       pages={[
         {
           backgroundColor: isDarkMode ? '#000' : '#fff',
