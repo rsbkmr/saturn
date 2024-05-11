@@ -1,12 +1,12 @@
 import {Pressable, Text, View} from 'react-native';
 import LottieView from 'lottie-react-native';
 import React from 'react';
-// import {RootNavigationProp} from '../navigation/Root';
+import {RootNavigationProp} from '../navigation/Root';
 import {SafeAreaView} from 'react-native-safe-area-context';
-// import {useNavigation} from '@react-navigation/native';
+import {useNavigation} from '@react-navigation/native';
 
 export function AddWallet() {
-  // const navigation = useNavigation<RootNavigationProp>();
+  const navigation = useNavigation<RootNavigationProp>();
 
   return (
     <SafeAreaView className="flex-1 p-4 bg-white dark:bg-black">
@@ -35,8 +35,7 @@ export function AddWallet() {
         </Pressable>
         <Pressable
           className="p-4 bg-blue-500 rounded-full active:opacity-50 dark:bg-blue-300"
-          // onPress={() => navigation.navigate('CreateWallet')}
-        >
+          onPress={() => navigation.navigate('CreateWallet')}>
           <Text className="text-base font-bold text-center text-white dark:text-black">
             Create a new wallet
           </Text>
