@@ -5,8 +5,10 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 // Screens
 import {Home} from '../screens/Home';
+import {Onboarding} from '../screens/Onboarding';
 
 export type RootNavigationList = {
+  Onboarding: undefined;
   Home: undefined;
 };
 
@@ -18,6 +20,7 @@ export function Root() {
   return (
     <NavigationContainer>
       <RootStack.Navigator screenOptions={{headerShown: false}}>
+        <RootStack.Screen name="Onboarding" component={Onboarding} />
         <RootStack.Screen name="Home" component={Home} />
       </RootStack.Navigator>
     </NavigationContainer>
