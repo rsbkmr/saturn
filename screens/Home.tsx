@@ -1,11 +1,13 @@
+import {
+  BoltIcon,
+  Cog6ToothIcon,
+  QrCodeIcon,
+  ViewfinderCircleIcon,
+} from 'react-native-heroicons/solid';
 import {Pressable, Text, View, useColorScheme} from 'react-native';
-import {BoltIcon} from 'react-native-heroicons/solid';
-import {Cog6ToothIcon} from 'react-native-heroicons/solid';
-import {QrCodeIcon} from 'react-native-heroicons/solid';
 import React from 'react';
 import {RootNavigationProp} from '../navigation/Root';
 import {SafeAreaView} from 'react-native-safe-area-context';
-import {ViewfinderCircleIcon} from 'react-native-heroicons/solid';
 import {useNavigation} from '@react-navigation/native';
 import {useStore} from '../Store';
 

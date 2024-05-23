@@ -8,15 +8,17 @@ import {
   useColorScheme,
 } from 'react-native';
 import {
+  ArrowLeftIcon,
+  ExclamationTriangleIcon,
+  LightBulbIcon,
+} from 'react-native-heroicons/solid';
+import {
   Camera,
   useCameraDevice,
   useCameraPermission,
   useCodeScanner,
 } from 'react-native-vision-camera';
 import React, {useEffect, useState} from 'react';
-import {ArrowLeftIcon} from 'react-native-heroicons/solid';
-import {ExclamationTriangleIcon} from 'react-native-heroicons/solid';
-import {LightBulbIcon} from 'react-native-heroicons/solid';
 import LottieView from 'lottie-react-native';
 import {RootNavigationProp} from '../navigation/Root';
 import {SafeAreaView} from 'react-native-safe-area-context';

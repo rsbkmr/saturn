@@ -1,4 +1,3 @@
-// import * as Keychain from 'react-native-keychain';
 import * as Keychain from 'react-native-keychain';
 import {FlatList, Pressable, Text, View} from 'react-native';
 import React, {useEffect, useState} from 'react';
