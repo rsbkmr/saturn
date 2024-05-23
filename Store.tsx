@@ -3,10 +3,12 @@ import React, {createContext, useContext, useEffect, useReducer} from 'react';
 
 interface IState {
   mnemonic?: string;
+  balance?: number;
 }
 
 const initialState: IState = {
   mnemonic: '',
+  balance: 100,
 };
 
 const StoreContext = createContext<{

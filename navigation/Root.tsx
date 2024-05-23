@@ -8,12 +8,16 @@ import {AddWallet} from '../screens/AddWallet';
 import {CreateWallet} from '../screens/CreateWallet';
 import {Home} from '../screens/Home';
 import {Onboarding} from '../screens/Onboarding';
+import {Scan} from '../screens/Scan';
+import {Send} from '../screens/Send';
 
 export type RootNavigationList = {
   Onboarding: undefined;
   Home: undefined;
   AddWallet: undefined;
   CreateWallet: undefined;
+  Scan: undefined;
+  Send: {addressOrInvoice: string};
 };
 
 export type RootNavigationProp = NativeStackNavigationProp<RootNavigationList>;
@@ -28,6 +32,8 @@ export function Root() {
         <RootStack.Screen name="AddWallet" component={AddWallet} />
         <RootStack.Screen name="CreateWallet" component={CreateWallet} />
         <RootStack.Screen name="Home" component={Home} />
+        <RootStack.Screen name="Scan" component={Scan} />
+        <RootStack.Screen name="Send" component={Send} />
       </RootStack.Navigator>
     </NavigationContainer>
   );
