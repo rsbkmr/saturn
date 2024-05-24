@@ -57,31 +57,38 @@ export function Scan() {
   return (
     <SafeAreaView className="flex-1">
       {device ? (
-        <Camera
-          style={StyleSheet.absoluteFill}
-          device={device}
-          isActive={true}
-          codeScanner={codeScanner}
-          torch={torch ? 'on' : 'off'}
-        />
+        <>
+          <Camera
+            style={StyleSheet.absoluteFill}
+            device={device}
+            isActive={true}
+            codeScanner={codeScanner}
+            torch={torch ? 'on' : 'off'}
+          />
+          <View className="flex-1">
+            <LottieView
+              source={require('../animations/scan/scanner.lottie')}
+              autoPlay
+              loop
+              className="-mt-3 h-[120%] w-full"
+            />
+          </View>
+        </>
       ) : (
         <View
-          className="items-center justify-center bg-black"
+          className="items-center justify-center bg-white dark:bg-black"
           style={StyleSheet.absoluteFill}>
-          <ExclamationTriangleIcon size={48} color="white" />
-          <Text className="mt-5 text-white">Camera not found.</Text>
+          <ExclamationTriangleIcon
+            size={48}
+            color={isDarkMode ? '#f5f5f5' : '#171717'}
+          />
+          <Text className="mt-5 text-base font-medium text-black dark:text-white">
+            Camera not found.
+          </Text>
         </View>
       )}
 
-      <View className="flex-1">
-        <LottieView
-          source={require('../animations/scan/scanner.lottie')}
-          autoPlay
-          loop
-          className="-mt-3 h-[120%] w-full"
-        />
-      </View>
-      <View className="flex-row items-center justify-between p-4 rounded-t-3xl bg-neutral-100 dark:bg-neutral-900">
+      <View className="flex-row items-center justify-between p-4 mt-auto rounded-t-3xl bg-neutral-100 dark:bg-neutral-900">
         <Pressable
           onPress={() => navigation.goBack()}
           className="active:opacity-50">
